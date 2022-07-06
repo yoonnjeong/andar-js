@@ -1,0 +1,511 @@
+@import url(./reset.css);
+@import url(./common.css);
+
+
+header {
+    position: relative;
+}
+header .logo-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+header .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 87px;
+    height: 23px;
+    background: url(../images/main_logo_m.svg) no-repeat;
+    background-size: 87px auto;
+}
+
+/* 스크립트 */
+header.fixed .logo-area {
+    background: #fff;
+    position: fixed;
+}
+header.fixed .logo {
+    background: url(../images/logo.png) no-repeat;
+    background-size: 87px auto;
+}
+header.fixed .menu-area .btn-tab {
+    background-position: 0 -50px;
+}
+header.fixed .menu-area .btn-search {
+    background-position: 0 -75px;
+}
+header.fixed .utils-area .btn-cart {
+    background-position: 0 -25px;
+}
+header.fixed .utils-area .btn-login {
+    background-position: 0 0;
+}
+
+header .logo-area div > a {
+    display: block;
+    margin: 10px;
+}
+header .menu-area .btn-tab {
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 17px;
+    background-position: -25px -50px;
+}
+header .menu-area .btn-search {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background-position: -25px -75px;
+}
+header .utils-area .btn-cart {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background-position: -25px -25px;
+}
+header .utils-area .num {
+    position: absolute;
+    right: -9px;
+    top: -5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+header .utils-area .btn-login {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background-position: -25px 0;
+}
+
+.gnb {
+    position: fixed;
+    top: 0;
+    width: 88%;
+    z-index: 100;
+    height: 100%;
+    background: #fff;
+    overflow-y: auto;
+
+    left: -88%;
+    transition: left 0.3s;
+}
+/* 스크립트 */
+.gnb.fixed {
+    left: 0;
+}
+body.fixed {
+    overflow-y: hidden;
+}
+body.fixed .dimmed {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: 50;
+}
+
+
+.gnb .inner-wrap {
+    padding: 0 16px;
+}
+.gnb .login-area {
+    padding: 32px 16px 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.gnb .login-area .btn-wrap {
+    overflow: hidden;
+    display: flex;
+}
+.gnb .login-area a.link-login,
+.gnb .login-area a.link-join {
+    padding: 10px 26px;
+    font-size: 13px;
+    line-height: 15px;
+    border-radius: 2px;
+    display: inline-block;
+    box-sizing: border-box;
+    letter-spacing: -1px;
+    /* float: left; */
+}
+.gnb .login-area a.link-login {
+    color: #fff;
+    border: 1px solid #222;
+    font-weight: 700;
+    background: #0e0e0e;
+}
+.gnb .login-area a.link-join {
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    font-weight: 500;
+    margin-left: 6px;
+}
+.gnb .login-area a.btn-close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 16px;
+    top: 38px;
+    background: url(../images/icon_close.png) no-repeat;
+    background-size: 100% auto;
+}
+.gnb .login-area .desc {
+    display: block;
+    color: #777;
+    padding-top: 15px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.gnb .login-area .desc span {
+    font-weight: 700;
+}
+.gnb .gnb-list {
+    padding: 18px 0 11px;
+    box-sizing: border-box;
+}
+.gnb .gnb-item {
+    position: relative;
+}
+.gnb .depth1 {
+    position: relative;
+    display: block;
+    padding: 15px 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.gnb .depth1.festi {
+    color: #EE5728;
+}
+.gnb .gnb-item .event {
+    position: relative;
+}
+.gnb .gnb-item .event::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #EE5728;
+    border-radius: 50%;
+    top: 0px;
+    right: -10px;
+}
+/* 스크립트 */
+.gnb .gnb-item .depth2-list  {
+   /* display: none; */
+   height: 0;
+   overflow: hidden;
+   transition: 0.3s;
+}
+.gnb .gnb-item .depth2-list a {
+    display: block;
+    padding: 11px 0;
+    color: #848484;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+}
+.gnb .gnb-item .down {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 30px;
+    height: 28px;
+    z-index: 50;
+    background-image: url(../images/btn_open.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.gnb .sevice-area {
+    padding: 18px 0 11px;
+    border-top: 1px solid #ddd;
+}
+.gnb .sevice-area .cs-item a {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 9px 0;
+    color: #888;
+    display: block;
+    font-weight: 500;
+    position: relative;
+}
+.gnb .sevice-area .down {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 30px;
+    height: 28px;
+    z-index: 50;
+    background-image: url(../images/btn_open.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.gnb .depth1 .down {
+    transition: .3s;
+}
+/* 스크립트 */
+.gnb .cs-list {
+    display: none;
+}
+.gnb .depth1.on .down {
+    transform: rotate(180deg);
+}
+.gnb .event-area {
+    width: 100%;
+}
+.gnb .event-area img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.gnb .txt-box {
+    position: relative;
+}
+.gnb .txt-box .title {
+    margin: 12px 0 6px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    color: #222;
+    display: block;
+}
+.gnb .txt-box .desc {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    color: #777;
+    display: block;
+}
+.gnb .txt-box a.btn-all {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    color: #777;
+}
+.gnb .btn-zone {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.gnb .btn-zone a {
+    position: relative;
+    text-align: center;
+    display: block;
+    width: 50%;
+    background: #F2F2F2;
+    padding: 14px 0;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    color: #777;
+}
+.gnb .btn-zone a+a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+    width: 1px;
+    height: 16px;
+    background: #CCC;
+    z-index: 1;
+}
+footer {
+    margin: 0;
+    background: #fafafa;
+    padding: 40px 16px 40px;
+}
+footer .cs-box {
+    color: #555;
+    padding-bottom: 30px;
+}
+footer .cs-box .title {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+footer .cs-box > a {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;  
+    padding-bottom: 10px;
+    display: block;  
+}
+footer .cs-box .time:nth-of-type(1) {
+    padding-bottom: 5px;
+}
+footer .cs-box .time {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+}
+footer .sns-list {
+    width: 150px;
+    display: flex;
+    flex: 1;
+}
+footer .sns-item {
+    margin-right: 25px;
+}
+footer .sns-item a {
+    display: block;
+    height: 22px;
+}
+footer .sns-item a img {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+}
+footer .corp-list {
+    padding: 30px 0;
+    display: flex;
+}
+footer .corp-item {
+    padding-right: 10px;
+    position: relative;
+}
+footer .corp-item+.corp-item {
+    padding-left: 10px;
+}
+footer .corp-item::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 10px;
+    background: #ccc;
+}
+footer .corp-item:last-child:after {
+    display: none;
+}
+footer .corp-item a {
+    display: block;
+    padding: 9px 0;
+    color: #777;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.7;
+    letter-spacing: -0.5px;
+}
+footer .copyright-area .desc {
+    display: block;
+    font-size: 11px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #777;
+}
+footer .copyright-area address {
+    display: inline-block;
+    font-size: 11px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #777;
+}
+footer .copyright-area a {
+    display: inline-block;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 500;
+    color: #777;
+}
+footer .copyright-area .bar {
+    display: inline-block;
+    position: relative;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 500;
+    color: #777;
+}
+footer .copyright-area .bar::after {
+    width: 1px;
+    height: 10px;
+    background: #ccc;
+    margin: 0 10px;
+    content: "";
+    display: inline-block;
+}
+footer .copyright-area .block {
+    display: block;
+}
+footer .copyright-area .copyright {
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.02em;
+    color: #777;
+    padding-top: 30px;
+    font-weight: 700;
+    display: block;
+}
+footer .copyright-area .copyright span {
+    font-weight: 300;
+}
+footer .mark {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+}
+footer .mark a {
+    margin-right: 22px;
+}
+footer .mark a.link-ftc {
+    width: 45px;
+}
+footer .mark a.link-semantic {
+    width: 36px;
+}
+footer .mark a.link-kg {
+    width: 27px;
+    margin-bottom: 2px;
+}
+footer .mark a img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: cover;
+}

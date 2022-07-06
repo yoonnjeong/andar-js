@@ -1,0 +1,89 @@
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    margin: -1px;
+}
+
+body {
+    font-family: 'Gilroy','NotoSansKR', sans-serif;
+    font-size: 13px;
+    line-height: 1.2em;
+    font-weight: 400;
+}
+
+header .menu-area .btn-tab,
+header .menu-area .btn-search,
+header .utils-area .btn-cart,
+header .utils-area .btn-login {
+    background: url(../images/sp_common_layout.png) no-repeat;
+    background-size: 100px auto;
+}
+li.event::after{
+    position: relative;
+    top: -8px;
+    right: -2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ee5728;
+    display: inline-block;
+    content: "";
+}
+.quick-icon {
+    /* display: none; */
+    opacity: 0;
+    pointer-events: none;
+
+
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    z-index: 20;
+    width: 50px;
+    border: 1px solid #e9e9e9;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.quick-icon a {
+    padding: 5px;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+}
+.quick-icon a+a {
+    border-top: 1px solid #e9e9e9;
+}
+.quick-icon a.link-kakaotalk {
+    margin-top: 4px;
+    display: block;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+    color: #595959;
+}
+.quick-icon a.link-kakaotalk img {
+    width: 35px;
+    height: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.quick-icon a.btn-top {
+    height: 50px;
+}
+.quick-icon a.btn-top img {
+    height: 24px;
+    display: inline-block;
+    margin-top: 8px;
+    width: 19px;
+}
+/* 스크립트 */
+.quick-icon.on {
+    opacity: 1;
+    pointer-events: all;
+}
+
+

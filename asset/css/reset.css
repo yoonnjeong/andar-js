@@ -1,0 +1,136 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+    font-family: 'Gilroy';
+    font-weight: 700;
+    src: url(../font/Gilroy-Bold.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    src: url(../font/Gilroy-Medium.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    src: url(../font/Gilroy-Regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    font-weight: 700;
+    src: url(../font/NotoSansKR-Bold-Hestia.woff) format('woff');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    font-weight: 400;
+    src: url(../font/NotoSansKR-Light-Hestia.woff) format('woff');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    font-weight: 600;
+    src: url(../font/NotoSansKR-Medium-Hestia.woff) format('woff');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    font-weight: 500;
+    src: url(../font/NotoSansKR-Regular-Hestia.woff) format('woff');
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    vertical-align: top;
+}
+
+input {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    font-family: 'Gilroy','NotoSansKR', sans-serif;
+}
+fieldset {
+    margin: 0;
+}
+button {
+    background: transparent;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
