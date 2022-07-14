@@ -274,7 +274,10 @@ body.fixed .dimmed {
 }
 /* 스크립트 */
 .gnb .cs-list {
-    display: none;
+    /* display: none; */
+    overflow: hidden;
+    transition: 0.3s;
+    height: 0;
 }
 .gnb .depth1.on .down {
     transform: rotate(180deg);

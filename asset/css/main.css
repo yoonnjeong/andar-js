@@ -132,6 +132,13 @@ header.fixed .lab-area {
     height: 0;
     overflow: hidden;
     transition: 0.3s;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.lab-area .all-wrap::-webkit-scrollbar {
+    display: none;
 }
 .lab-area .all-menu {
     display: none;
@@ -179,8 +186,8 @@ header.fixed .lab-area {
     background: #F6F6F6;
     border-top: 1px solid #dcdcdc;
 
-
-    display: none;
+    /* overflow-y: hidden; */
+    /* display: none; */
 }
 .search-area {
     position: fixed;
