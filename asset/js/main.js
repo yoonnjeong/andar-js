@@ -96,10 +96,9 @@
                 window.scrollBy(0, -55);
             } else {
                 clearInterval(upper);
+                qIcon.classList.remove('on');
             }
-        }, 10, function(){
-            qIcon.classList.remove('on');
-        });
+        }, 10);
     };
 
 
