@@ -281,8 +281,8 @@
           delay: 3500,
           disableOnInteraction: false,
         },
-        scrollbar: {
-            el: ".main-swiper .swiper-scrollbar",
+        pagination: {
+            el: ".main-swiper .swiper-pagination",
             hide: false,
         },
     });
