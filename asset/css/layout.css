@@ -192,7 +192,7 @@ body.fixed .dimmed {
 .gnb .gnb-item {
     position: relative;
 }
-.gnb .depth1 {
+.gnb .btn-depth1 {
     position: relative;
     display: block;
     padding: 15px 0;
@@ -201,7 +201,7 @@ body.fixed .dimmed {
     line-height: 16px;
     font-weight: 600;
 }
-.gnb .depth1.festi {
+.gnb .btn-depth1.festi {
     color: #EE5728;
 }
 .gnb .gnb-item .event {
@@ -269,7 +269,7 @@ body.fixed .dimmed {
     background-repeat: no-repeat;
     background-size: contain;
 }
-.gnb .depth1 .down {
+.gnb .btn-depth1 .down {
     transition: .3s;
 }
 /* 스크립트 */
@@ -279,7 +279,7 @@ body.fixed .dimmed {
     transition: 0.3s;
     height: 0;
 }
-.gnb .depth1.on .down {
+.gnb .btn-depth1.on .down {
     transform: rotate(180deg);
 }
 .gnb .event-area {

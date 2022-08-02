@@ -67,6 +67,7 @@
 
     const qIcon = document.querySelector('.quick-icon');
     const btnTop = document.querySelector('.btn-top');
+    const gnbOn = document.querySelector('.gnb');
     const documentEle = document.documentElement;
     const documentHei = documentEle.scrollHeight;
 
@@ -75,12 +76,15 @@
         const wheel = e.wheelDelta;
 
         if (wheel > 0 && 0 == !scrollCurr) {
-            qIcon.classList.add('on');
+
+            if(gnbOn.classList.contains('fixed') == false){
+                qIcon.classList.add('on');
+            }
 
             if(0 == scrollCurr){
                 qIcon.classList.remove('on');
             }
-        } else {
+        } else if(gnbOn.classList.contains('fixed') == false) {
             qIcon.classList.remove('on');
         }
     });
@@ -139,7 +143,7 @@
     
 
 
-    const oneDepths = document.querySelectorAll('.gnb .depth1');
+    const oneDepths = document.querySelectorAll('.gnb .btn-depth1');
     // const siblingHeight = document.querySelectorAll('.gnb .depth2-list').length;
     // const h = document.querySelectorAll('.gnb .depth2-list').height;
     // const twoDepths = siblingHeight * h;
